@@ -367,11 +367,17 @@
             );
         
     
-        function geo_json_21175a1ce58210218ca170ed7bd97517_styler(feature) {
-            switch(feature.properties.name) {
-                default:
-                    return {"color": "transparent", "fillColor": "transparent", "fillOpacity": 0, "opacity": 0, "weight": 0};
-            }
+function geo_json_21175a1ce58210218ca170ed7bd97517_styler(feature) {
+    return {
+        "color": "#0000FF",  // Bright blue for the border
+        "fillColor": "none",  // Transparent fill
+        "fillOpacity": 0,     // No fill color
+        "opacity": 0.8,       // Slight transparency for the border
+        "weight": 4,          // Thicker border for better visibility
+        "dashArray": "5, 5"   // Dashed line effect
+    };
+}
+
         }
         function geo_json_21175a1ce58210218ca170ed7bd97517_pointToLayer(feature, latlng) {
             var opts = {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 3};
